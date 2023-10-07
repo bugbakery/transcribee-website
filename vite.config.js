@@ -47,6 +47,7 @@ function faviconPlugin(originalPath) {
 
 // eslint-disable-next-line import/no-default-export
 export default defineConfig({
+  base: '', // this fixes hosting under non root locations
   plugins: [
     faviconPlugin('./src/assets/transcribee-logo.svg'),
   ],
