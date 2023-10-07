@@ -1,6 +1,6 @@
 import { Page } from '../components/Page';
 
-export function PageNotFoundPage() {
+export default function NotFoundPage() {
   return (
     <Page>
       <div className="prose prose-lg text-center my-20 mx-auto">

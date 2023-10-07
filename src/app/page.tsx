@@ -1,6 +1,6 @@
 import { Page } from '../components/Page';
 
-export function HomePage() {
+export default function HomePage() {
   return (
     <Page>
       <h1>Home Page</h1>

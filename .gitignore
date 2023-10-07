@@ -1,10 +1,12 @@
 # npm
 node_modules
 
-# vite
-/dist
-
 # typescript
 *.tsbuildinfo
 
-public/LICENSES.md
+# next.js
+/.next/
+/out/
+
+# production
+/build

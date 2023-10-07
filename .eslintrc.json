@@ -1,17 +1,7 @@
 {
-  "env": {
-    "browser": true,
-    "es6": true,
-    "node": true
-  },
   "plugins": ["react", "@typescript-eslint"],
   "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:import/recommended",
-    "plugin:import/typescript",
-    "plugin:react/recommended",
-    "plugin:react/jsx-runtime",
+    "next",
     "prettier"
   ],
   "parser": "@typescript-eslint/parser",
@@ -19,12 +9,6 @@
     "@typescript-eslint/no-unused-vars": [
       1,
       { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }
-    ],
-    "import/no-default-export": 1
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
+    ]
   }
 }
