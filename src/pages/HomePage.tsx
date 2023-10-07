@@ -1,7 +1,9 @@
+import { Page } from '../components/Page';
+
 export function HomePage() {
   return (
-    <div>
+    <Page>
       <h1>Home Page</h1>
-    </div>
+    </Page>
   );
 }
