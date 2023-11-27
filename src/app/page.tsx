@@ -9,8 +9,6 @@ import ExportSrc from '../assets/export.png';
 import CorrectSrc from '../assets/correct.png';
 import clsx from 'clsx';
 
-
-
 export default function HomePage() {
   return (
     <Page>
@@ -18,24 +16,27 @@ export default function HomePage() {
       <Block
         heading="State of the art automatic transcription."
         imageSrc={WorkerPopupSrc}
-        imageAlt='An image of the transcribee popup showing the automatic transcription status'
+        imageAlt="An image of the transcribee popup showing the automatic transcription status"
       >
-        transcribee uses the open source <i>Whisper</i> machine-learning (ML) model to create high quality automated transcriptions.
+        transcribee uses the open source <i>Whisper</i> machine-learning (ML) model to create high
+        quality automated transcriptions.
       </Block>
       <Block
         heading="Manual Refinement"
         imageSrc={CorrectSrc}
-        imageAlt='An image of the transcribee popup showing the automatic transcription status'
+        imageAlt="An image of the transcribee popup showing the automatic transcription status"
         imageOnRight={true}
       >
-        Automatic transcripts can easily be manually corrected. Words that are likely not correct are highlighted for speedy corrections.
+        Automatic transcripts can easily be manually corrected. Words that are likely not correct
+        are highlighted for speedy corrections.
       </Block>
       <Block
         heading="Export"
         imageSrc={ExportSrc}
-        imageAlt='An image of the transcribee popup showing the automatic transcription status'
+        imageAlt="An image of the transcribee popup showing the automatic transcription status"
       >
-        Completed documents can be exported as Text documents or for subtitle usage as WebVTT or SRT.
+        Completed documents can be exported as Text documents or for subtitle usage as WebVTT or
+        SRT.
       </Block>
       <Block
         heading="100% Open Source"
@@ -44,14 +45,15 @@ export default function HomePage() {
           width: 1200,
           height: 600,
         }}
-        imageAlt=''
+        imageAlt=""
         imageOnRight={true}
       >
-        transcribee is open source and licensed under the AGPL-3.0 license. You can inspect the code, contribute to it and host your own instance.       </Block>
+        transcribee is open source and licensed under the AGPL-3.0 license. You can inspect the
+        code, contribute to it and host your own instance.{' '}
+      </Block>
     </Page>
   );
 }
-
 
 function Hero() {
   return (
@@ -89,7 +91,19 @@ function Hero() {
   );
 }
 
-function Block({ children, heading, imageSrc, imageAlt, imageOnRight = false }: { children: ReactNode, heading: ReactNode, imageSrc: StaticImageData, imageAlt: string, imageOnRight?: boolean }) {
+function Block({
+  children,
+  heading,
+  imageSrc,
+  imageAlt,
+  imageOnRight = false,
+}: {
+  children: ReactNode;
+  heading: ReactNode;
+  imageSrc: StaticImageData;
+  imageAlt: string;
+  imageOnRight?: boolean;
+}) {
   return (
     <div className="flex flex-col md:flex-row gap-10 items-center my-6 sm:my-36">
       <div className="flex items-center">
@@ -99,17 +113,15 @@ function Block({ children, heading, imageSrc, imageAlt, imageOnRight = false }: 
           className="rounded-md w-[530px] shadow-[0px_1px_15px_rgba(0,0,0,0.1)]"
         />
       </div>
-      <div className={clsx(
-        "text-center md:text-left items-center md:items-start flex flex-col flex-grow",
-        imageOnRight && 'md:order-first'
-        )}>
-        <h2 className="text-4xl font-semibold mb-6 leading-tight px-8 md:px-0">
-          {heading}
-        </h2>
-        <p className="text-lg leading-6 mb-6 max-w-sm">
-          {children}
-        </p>
+      <div
+        className={clsx(
+          'text-center md:text-left items-center md:items-start flex flex-col flex-grow',
+          imageOnRight && 'md:order-first',
+        )}
+      >
+        <h2 className="text-4xl font-semibold mb-6 leading-tight px-8 md:px-0">{heading}</h2>
+        <p className="text-lg leading-6 mb-6 max-w-sm">{children}</p>
       </div>
     </div>
-  )
+  );
 }

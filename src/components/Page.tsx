@@ -18,7 +18,11 @@ const NavLink = ({
   className?: string;
 } & ComponentProps<typeof Link>) => (
   <li>
-    <Link href={href} className={clsx('text-gray-500 hover:text-black hover:underline', className)} {...props}>
+    <Link
+      href={href}
+      className={clsx('text-gray-500 hover:text-black hover:underline', className)}
+      {...props}
+    >
       {children}
     </Link>
   </li>
@@ -73,7 +77,12 @@ function SidebarMenu() {
         <FaBars className="w-full h-full" />
       </label>
 
-      <input type="checkbox" name="" id="menu-checkbox" className="peer opacity-0 w-0 h-0 md:hidden" />
+      <input
+        type="checkbox"
+        name=""
+        id="menu-checkbox"
+        className="peer opacity-0 w-0 h-0 md:hidden"
+      />
       <div className="fixed flex flex-col right-0 top-0 bottom-0 bg-white p-4 shadow-lg border border-1 border-gray-200 transition-all duration-300 translate-x-[calc(100%+20px)] invisible peer-checked:visible peer-checked:translate-x-0 w-full sm:w-80">
         <label
           htmlFor="menu-checkbox"
@@ -100,48 +109,55 @@ function Navbar() {
   );
 }
 
-
-function Footer({ }) {
+function Footer({}) {
   return (
-    <footer className='bg-neutral-100  py-12 px-10 mt-20'>
-      <div className='flex flex-row gap-5 flex-wrap max-w-7xl mx-auto px-4'>
-        <div className='flex-grow w-full sm:w-[unset]'>
-          <h2 className='font-bold text-lg place-content-evenly'>transcribee</h2>
+    <footer className="bg-neutral-100  py-12 px-10 mt-20">
+      <div className="flex flex-row gap-5 flex-wrap max-w-7xl mx-auto px-4">
+        <div className="flex-grow w-full sm:w-[unset]">
+          <h2 className="font-bold text-lg place-content-evenly">transcribee</h2>
         </div>
-        <div className='flex-grow'>
-          <h3 className='font-semibold text-neutral-500'>Product</h3>
-          <ul className='mt-1'>
-            <NavLink href='/'>Features</NavLink>
-            <NavLink target="_blank" href='https://github.com/bugbakery/transcribee'>Github</NavLink>
+        <div className="flex-grow">
+          <h3 className="font-semibold text-neutral-500">Product</h3>
+          <ul className="mt-1">
+            <NavLink href="/">Features</NavLink>
+            <NavLink target="_blank" href="https://github.com/bugbakery/transcribee">
+              Github
+            </NavLink>
           </ul>
         </div>
-        <div className='flex-grow'>
-          <h3 className='font-semibold text-neutral-500'>Pricing</h3>
-          <ul className='mt-1'>
-            <NavLink href='/pricing'>Standard</NavLink>
-            <NavLink href='/pricing'>Educational</NavLink>
-            <NavLink href='/contact'>Contact Us</NavLink>
+        <div className="flex-grow">
+          <h3 className="font-semibold text-neutral-500">Pricing</h3>
+          <ul className="mt-1">
+            <NavLink href="/pricing">Standard</NavLink>
+            <NavLink href="/pricing">Educational</NavLink>
+            <NavLink href="/contact">Contact Us</NavLink>
           </ul>
         </div>
-        <div className='flex-grow'>
-          <h3 className='font-semibold text-neutral-500'>Legal</h3>
-          <ul className='mt-1'>
-            <NavLink target="_blank" href='https://transcribee.net/page/tos'>Terms of Service</NavLink>
-            <NavLink target="_blank" href='https://transcribee.net/page/privacy'>Privacy Policy</NavLink>
-            <NavLink target="_blank" href='/contact'>Imprint</NavLink>
+        <div className="flex-grow">
+          <h3 className="font-semibold text-neutral-500">Legal</h3>
+          <ul className="mt-1">
+            <NavLink target="_blank" href="https://transcribee.net/page/tos">
+              Terms of Service
+            </NavLink>
+            <NavLink target="_blank" href="https://transcribee.net/page/privacy">
+              Privacy Policy
+            </NavLink>
+            <NavLink target="_blank" href="/contact">
+              Imprint
+            </NavLink>
           </ul>
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
-export function Page({ children }: { children: React.ReactNode }) {
+export function Page({ children, className }: { children: React.ReactNode; className?: string }) {
   return (
-    <div className='flex flex-col min-h-screen items-stretch place-content-stretch'>
+    <div className="flex flex-col min-h-screen items-stretch place-content-stretch">
       <Navbar />
-      <main className="max-w-7xl mx-auto px-4">{children}</main>
-      <div className='flex-grow' />
+      <main className={clsx('max-w-7xl mx-auto px-4', className)}>{children}</main>
+      <div className="flex-grow" />
       <Footer />
     </div>
   );
