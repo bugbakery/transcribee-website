@@ -19,54 +19,54 @@ export default function PricingPage() {
       <h3 className="text-center my-4">
         Simple, yet affordable pricing model. Completely usage based. No monthly fees. No surprises.
       </h3>
-      <div className="flex my-16">
+      <div className="flex my-16 flex-wrap gap-4 lg:gap-0">
         <PricingCard title="Educational" buttonText="Request Discount" buttonUrl="/todo">
           <Price price={1} />
-          <p>students and teachers only</p>
+          <ListP>students and teachers only</ListP>
           <hr className="h-px w-full my-1 bg-gray-200" />
-          <p>3 hours free each month</p>
+          <ListP>3 hours free each month</ListP>
           <hr className="h-px w-full my-1 bg-gray-200" />
-          <p>$0.5/hour for lower quality transcripts</p>
+          <ListP>$0.5/hour for lower quality transcripts</ListP>
         </PricingCard>
         <PricingCard
           title="Regular"
           buttonText="Get Started"
           buttonUrl="https://transcribee.net/signup"
-          className="relative -mx-5 -my-3 z-10 h-[480px]"
+          className="lg:relative lg:-mx-5 lg:-my-3 lg:z-10 lg:h-[480px] -order-1 lg:order-none"
         >
           <Price price={5} />
-          <p>commercial use</p>
+          <ListP>commercial use</ListP>
           <hr className="h-px w-full my-1 bg-gray-200" />
-          <p>3 hours free each month</p>
+          <ListP>3 hours free each month</ListP>
           <hr className="h-px w-full my-1 bg-gray-200" />
-          <p>$2.5/hour for lower quality transcripts</p>
+          <ListP>$2.5/hour for lower quality transcripts</ListP>
         </PricingCard>
         <PricingCard
           title="Universities or Enterprises"
           buttonText="Contact Us"
           buttonUrl="/contact"
         >
-          <div className="flex-grow" />
+          <div className="flex-grow-[3]" />
 
           <div>
-            <p>You want a custom instance for your university or enterprise?</p>
+            <ListP>You want a custom instance for your university or enterprise?</ListP>
             <hr className="h-px w-full my-1 bg-gray-200" />
-            <p>You have special needs? </p>
+            <ListP>You have special needs? </ListP>
             <hr className="h-px w-full my-1 bg-gray-200" />
-            <p>You need custom features?</p>
+            <ListP>You need custom features?</ListP>
           </div>
         </PricingCard>
       </div>
 
-      <div className="flex my-16 gap-4">
-        <div className="rounded-md bg-neutral-100 p-10 basis-0 flex-grow">
+      <div className="flex my-16 gap-4 flex-wrap">
+        <div className="rounded-md bg-neutral-100 p-10 basis-0 flex-grow min-w-[300px]">
           <h3 className="text-2xl font-medium">Host it yourself</h3>
           <p>
             transcribee is 100% open source software. You can setup your own instance.{' '}
             <b>No license costs apply.</b>
           </p>
         </div>
-        <div className="rounded-md bg-neutral-100 p-10 basis-0 flex-grow">
+        <div className="rounded-md bg-neutral-100 p-10 basis-0 flex-grow min-w-[300px]">
           <h3 className="text-2xl font-medium">Non-profits</h3>
           <p>
             You’re making the world a better place?{' '}
@@ -78,6 +78,14 @@ export default function PricingPage() {
         </div>
       </div>
     </Page>
+  );
+}
+
+function ListP({children}: {children: ReactNode}) {
+  return (
+    <p className='text-center'>
+      {children}
+    </p>
   );
 }
 
@@ -97,7 +105,9 @@ function PricingCard({
   return (
     <div
       className={clsx(
-        'border border-neutral-300 shadow-[0px_4px_20px_0px_rgba(0,0,0,0.15)] rounded-md border-solid flex-grow basis-0 h-[460px] flex flex-col p-14 items-center',
+        'border border-neutral-300 shadow-[0px_4px_20px_0px_rgba(0,0,0,0.15)] rounded-md border-solid',
+        'flex-grow basis-0 h-[460px] flex flex-col p-14 items-center',
+        'min-w-full lg:min-w-[340px]',
         'bg-white',
         className,
       )}
