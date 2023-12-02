@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 
 export function MailLink() {
-    const address = "(: tey liame cilbup gnikrow a evah tnod ew ,yrros";
+    const address = "ten.eebircsnart@tcatnoc";
     const [addressState, setAdress] = useState(null as null | string);
     useEffect(() => {
       setTimeout(() => {
