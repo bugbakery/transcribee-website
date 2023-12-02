@@ -81,12 +81,8 @@ export default function PricingPage() {
   );
 }
 
-function ListP({children}: {children: ReactNode}) {
-  return (
-    <p className='text-center'>
-      {children}
-    </p>
-  );
+function ListP({ children }: { children: ReactNode }) {
+  return <p className="text-center">{children}</p>;
 }
 
 function PricingCard({

@@ -6,7 +6,7 @@ import { ReactNode } from 'react';
 import AppPreviewSrc from '../assets/app-preview.png';
 import WorkerPopupSrc from '../assets/worker_popup.png';
 import ExportSrc from '../assets/export.png';
-import CorrectSrc from '../assets/correct.png';
+import CorrectSrc from '../assets/correction.svg';
 import clsx from 'clsx';
 
 export default function HomePage() {
@@ -15,16 +15,26 @@ export default function HomePage() {
       <Hero />
       <Block
         heading="State of the art automatic transcription."
-        imageSrc={WorkerPopupSrc}
-        imageAlt="An image of the transcribee popup showing the automatic transcription status"
+        image={
+          <Image
+            src={WorkerPopupSrc}
+            alt={'An image of the transcribee popup showing the automatic transcription status'}
+            className="rounded-md w-[530px] px-10"
+          />
+        }
       >
         transcribee uses the open source <i>Whisper</i> machine-learning (ML) model to create high
         quality automated transcriptions.
       </Block>
       <Block
         heading="Manual Refinement"
-        imageSrc={CorrectSrc}
-        imageAlt="An image of the transcribee popup showing the automatic transcription status"
+        image={
+          <Image
+            src={CorrectSrc}
+            alt={'An image of the transcribee popup showing the automatic transcription status'}
+            className="rounded-md w-[530px] shadow-[0px_4px_20px_rgba(0,0,0,0.15)]"
+          />
+        }
         imageOnRight={true}
       >
         Automatic transcripts can easily be manually corrected. Words that are likely not correct
@@ -32,20 +42,32 @@ export default function HomePage() {
       </Block>
       <Block
         heading="Export"
-        imageSrc={ExportSrc}
-        imageAlt="An image of the transcribee popup showing the automatic transcription status"
+        image={
+          <Image
+            src={ExportSrc}
+            alt={'An image of the transcribee popup showing the automatic transcription status'}
+            className="rounded-md w-[480px] px-10"
+          />
+        }
       >
         Completed documents can be exported as Text documents or for subtitle usage as WebVTT or
         SRT.
       </Block>
       <Block
         heading="100% Open Source"
-        imageSrc={{
-          src: 'https://opengraph.githubassets.com/9f54235fd4245bd96dc4a7a1943458471f4bcb1e36fff3c7ced9ddfad8977bf2/bugbakery/transcribee',
-          width: 1200,
-          height: 600,
-        }}
-        imageAlt=""
+        image={
+          <a target="_blank" href="https://github.com/bugbakery/transcribee">
+            <Image
+              src={
+                'https://opengraph.githubassets.com/9f54235fd4245bd96dc4a7a1943458471f4bcb1e36fff3c7ced9ddfad8977bf2/bugbakery/transcribee'
+              }
+              width={1200}
+              height={600}
+              alt={'An image of the transcribee popup showing the automatic transcription status'}
+              className="rounded-md w-[530px] shadow-[0px_4px_20px_rgba(0,0,0,0.15)]"
+            />
+          </a>
+        }
         imageOnRight={true}
       >
         transcribee is open source and licensed under the AGPL-3.0 license. You can inspect the
@@ -57,9 +79,9 @@ export default function HomePage() {
 
 function Hero() {
   return (
-    <div className="flex flex-col md:flex-row gap-10 items-center my-6 sm:my-48">
-      <div className="text-center md:text-left items-center md:items-start flex flex-col">
-        <h1 className="text-[calc(min(50px,10vw_+_3px))] md:text-[calc(min(60px,3.8vw_+_12px))] font-semibold mb-6 leading-tight">
+    <div className="flex flex-col lg:flex-row gap-10 items-center my-6 lg:my-48 md:my-12 lg:mx-4">
+      <div className="text-center lg:text-left items-center lg:items-start flex flex-col mb-1">
+        <h1 className="text-[calc(min(50px,10vw_+_3px))] lg:text-[calc(min(60px,3.8vw_+_12px))] font-semibold mb-6 leading-tight">
           Transcriptions
           <br />
           for everyone.
@@ -80,7 +102,7 @@ function Hero() {
           Get started for free →
         </a>
       </div>
-      <div className="flex items-center flex-grow w-full">
+      <div className="flex items-center flex-grow w-full max-w-[800px]">
         <Image
           src={AppPreviewSrc}
           alt="Overview of the transcribee application"
@@ -94,34 +116,25 @@ function Hero() {
 function Block({
   children,
   heading,
-  imageSrc,
-  imageAlt,
+  image,
   imageOnRight = false,
 }: {
   children: ReactNode;
   heading: ReactNode;
-  imageSrc: StaticImageData;
-  imageAlt: string;
+  image: ReactNode;
   imageOnRight?: boolean;
 }) {
   return (
-    <div className="flex flex-col md:flex-row gap-10 items-center my-6 sm:my-36">
-      <div className="flex items-center">
-        <Image
-          src={imageSrc}
-          alt={imageAlt}
-          className="rounded-md w-[530px] shadow-[0px_1px_15px_rgba(0,0,0,0.1)]"
-        />
-      </div>
+    <div className="flex flex-col md:flex-row lg:gap-10 items-center my-6 sm:my-36 justify-center mt-16">
       <div
         className={clsx(
-          'text-center md:text-left items-center md:items-start flex flex-col flex-grow',
-          imageOnRight && 'md:order-first',
+          'text-center md:text-left items-center md:items-start flex flex-col flex-grow max-w-sm',
         )}
       >
         <h2 className="text-4xl font-semibold mb-6 leading-tight px-8 md:px-0">{heading}</h2>
-        <p className="text-lg leading-6 mb-6 max-w-sm">{children}</p>
+        <p className="text-lg leading-6 mb-6">{children}</p>
       </div>
+      <div className={clsx('flex items-center', imageOnRight && 'md:order-first')}>{image}</div>
     </div>
   );
 }
