@@ -135,7 +135,7 @@ function Block({
         <h2 className="text-4xl font-semibold mb-6 leading-tight px-8 md:px-0">{heading}</h2>
         <p className="text-lg leading-6 mb-6">{children}</p>
       </div>
-      <div className={clsx('flex items-center')}>{image}</div>
+      <div className={clsx('flex items-center px-4')}>{image}</div>
     </div>
   );
 }
