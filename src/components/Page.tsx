@@ -121,7 +121,7 @@ function Footer({}) {
           <ul className="mt-1">
             <NavLink href="/">Features</NavLink>
             <NavLink target="_blank" href="https://github.com/bugbakery/transcribee">
-              Github
+              GitHub
             </NavLink>
           </ul>
         </div>
@@ -142,7 +142,7 @@ function Footer({}) {
             <NavLink target="_blank" href="https://transcribee.net/page/privacy">
               Privacy Policy
             </NavLink>
-            <NavLink target="_blank" href="/contact">
+            <NavLink href="/contact">
               Imprint
             </NavLink>
           </ul>
