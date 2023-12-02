@@ -79,7 +79,7 @@ export default function HomePage() {
 
 function Hero() {
   return (
-    <div className="flex flex-col lg:flex-row gap-10 items-center my-6 lg:my-48 md:my-12 lg:mx-4">
+    <div className="flex flex-col lg:flex-row gap-10 items-center my-6 lg:my-36 md:my-12 lg:mx-4">
       <div className="text-center lg:text-left items-center lg:items-start flex flex-col mb-1">
         <h1 className="text-[calc(min(50px,10vw_+_3px))] lg:text-[calc(min(60px,3.8vw_+_12px))] font-semibold mb-6 leading-tight">
           Transcriptions
