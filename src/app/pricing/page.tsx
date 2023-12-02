@@ -19,7 +19,7 @@ export default function PricingPage() {
       <h3 className="text-center my-4">
         Simple, yet affordable pricing model. Completely usage based. No monthly fees. No surprises.
       </h3>
-      <div className="flex my-16 flex-wrap gap-4 lg:gap-0">
+      <div className="flex my-16 flex-wrap gap-6 lg:gap-0 max-w-[500px] lg:max-w-none mx-auto lg:mx-none">
         <PricingCard title="Educational" buttonText="Request Discount" buttonUrl="/todo">
           <Price price={1} />
           <ListP>students and teachers only</ListP>
@@ -58,8 +58,8 @@ export default function PricingPage() {
         </PricingCard>
       </div>
 
-      <div className="flex my-16 gap-4 flex-wrap">
-        <div className="rounded-md bg-neutral-100 p-10 basis-0 flex-grow min-w-[300px]">
+      <div className="flex my-16 gap-4 flex-wrap max-w-[500px] lg:max-w-none lg:max-w-none mx-auto lg:mx-none">
+        <div className="rounded-md bg-neutral-100 p-10 basis-0 flex-grow min-w-[400px]">
           <h3 className="text-2xl font-medium">Host it yourself</h3>
           <p>
             transcribee is 100% open source software. You can setup your own instance.{' '}
