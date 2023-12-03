@@ -8,6 +8,7 @@ import WorkerPopupSrc from '../assets/worker_popup.png';
 import ExportSrc from '../assets/export.png';
 import CorrectSrc from '../assets/correction.svg';
 import clsx from 'clsx';
+import Link from 'next/link';
 
 export default function HomePage() {
   return (
@@ -95,12 +96,12 @@ function Hero() {
           Perfect for interviews, podcasts, video subtitles or voice recordings.
         </p>
 
-        <a
-          href="https://transcribee.net/signup"
+        <Link
+          href="/signup"
           className="inline-block bg-black hover:bg-gray-700 text-white px-4 py-2 rounded-md"
         >
           Get started for free →
-        </a>
+        </Link>
       </div>
       <div className="flex items-center flex-grow w-full max-w-[800px]">
         <Image

@@ -31,7 +31,7 @@ export default function PricingPage() {
         <PricingCard
           title="Regular"
           buttonText="Get Started"
-          buttonUrl="https://transcribee.net/signup"
+          buttonUrl="/signup"
           className="lg:relative lg:-mx-5 lg:-my-3 lg:z-10 lg:h-[480px] -order-1 lg:order-none"
         >
           <Price price={5} />
@@ -111,12 +111,12 @@ function PricingCard({
       <h3 className="text-center text-neutral-500 font-medium py-5">{title}</h3>
       {children}
       <div className="flex-grow" />
-      <a
+      <Link
         href={buttonUrl}
         className="inline-block bg-black hover:bg-gray-700 text-white px-4 py-2 rounded-md"
       >
         {buttonText}
-      </a>
+      </Link>
     </div>
   );
 }
