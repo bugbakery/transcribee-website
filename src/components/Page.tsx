@@ -47,20 +47,20 @@ function MainNav() {
 
       <ul className="hidden md:flex gap-2.5 items-center order-last">
         <li>
-          <a
-            href="https://transcribee.net/signup"
+          <Link
+            href="/signup"
             className="block px-4 py-2 rounded-md hover:bg-gray-200"
           >
             Sign Up
-          </a>
+          </Link>
         </li>
         <li>
-          <a
+          <Link
             href="https://transcribee.net/login"
             className="block px-4 py-2 bg-black hover:bg-gray-700 text-white rounded-md"
           >
             Sign In
-          </a>
+          </Link>
         </li>
       </ul>
     </>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Metadata } from 'next';
 import { Page } from '../../components/Page';
 import { MailLink } from './mail';
