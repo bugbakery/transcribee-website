@@ -20,7 +20,7 @@ export default function PricingPage() {
         Simple, yet affordable pricing model. Completely usage based. No monthly fees. No surprises.
       </h3>
       <div className="flex my-16 flex-wrap gap-6 lg:gap-0 max-w-[500px] lg:max-w-none mx-auto lg:mx-none">
-        <PricingCard title="Educational" buttonText="Request Discount" buttonUrl="/todo">
+        <PricingCard title="Educational" buttonText="Request Discount" buttonUrl="/contact">
           <Price price={1} />
           <ListP>students and teachers only</ListP>
           <hr className="h-px w-full my-1 bg-gray-200" />
