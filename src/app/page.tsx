@@ -19,7 +19,7 @@ export default function HomePage() {
         image={
           <Image
             src={WorkerPopupSrc}
-            alt={'An image of the transcribee popup showing the automatic transcription status'}
+            alt={'A screenshot showing a popup with the automatic transcription status'}
             className="rounded-md w-[530px] px-10"
           />
         }
@@ -36,7 +36,7 @@ export default function HomePage() {
         image={
           <Image
             src={ExportSrc}
-            alt={'An image of the transcribee popup showing the automatic transcription status'}
+            alt={'A screenshot showing a modal with the export options'}
             className="rounded-md w-[480px] px-10"
           />
         }
@@ -54,7 +54,7 @@ export default function HomePage() {
               }
               width={1200}
               height={600}
-              alt={'An image of the transcribee popup showing the automatic transcription status'}
+              alt={'An image showing the transcribee GitHub repository statistics'}
               className="rounded-md w-[530px] shadow-[0px_4px_20px_rgba(0,0,0,0.15)]"
             />
           </a>
