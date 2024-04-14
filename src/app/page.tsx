@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 import { Page } from '../components/Page';
 import { ReactNode } from 'react';

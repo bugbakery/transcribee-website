@@ -136,14 +136,14 @@ function Footer({}) {
         <div className="flex-grow">
           <h3 className="font-semibold text-neutral-500">Legal</h3>
           <ul className="mt-1">
-            <NavLink target="_blank" href="https://transcribee.net/page/tos">
+            {/* <NavLink target="_blank" href="https://transcribee.net/page/tos">
               Terms of Service
-            </NavLink>
+            </NavLink> */}
             <NavLink target="_blank" href="https://transcribee.net/page/privacy">
               Privacy Policy
             </NavLink>
-            <NavLink href="/contact">
-              Imprint
+            <NavLink href="/legal-notice">
+              Legal Notice
             </NavLink>
           </ul>
         </div>
