@@ -27,7 +27,7 @@ export function CorrectionAnimation() {
   return (
     <div
       ref={ref}
-      className="text-[36px] leading-normal py-6 px-8 rounded-md w-[580px] shadow-[0px_4px_20px_rgba(0,0,0,0.15)]"
+      className="text-[calc(min(6vw,_36px))] md:text-[calc(min(7vw_-_33px,_36px))] leading-normal py-6 px-8 rounded-md max-w-[580px] shadow-[0px_4px_20px_rgba(0,0,0,0.15)]"
     >
       Transcript with <span style={{ color: '#aa0000' }}>low </span>
       <span style={{ color: '#550000' }}>confidence</span> is highlighted in red. With this,{' '}
