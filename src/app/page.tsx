@@ -6,9 +6,9 @@ import { ReactNode } from 'react';
 import AppPreviewSrc from '../assets/app-preview.png';
 import WorkerPopupSrc from '../assets/worker_popup.png';
 import ExportSrc from '../assets/export.png';
-import CorrectSrc from '../assets/correction.svg';
 import clsx from 'clsx';
 import Link from 'next/link';
+import { CorrectionAnimation } from '../components/CorrectionAnimation';
 
 export default function HomePage() {
   return (
@@ -27,17 +27,7 @@ export default function HomePage() {
         transcribee uses the open source <i>Whisper</i> machine-learning (ML) model to create high
         quality automated transcriptions.
       </Block>
-      <Block
-        heading="Manual Refinement"
-        image={
-          <Image
-            src={CorrectSrc}
-            alt={'An image of the transcribee popup showing the automatic transcription status'}
-            className="rounded-md w-[530px] shadow-[0px_4px_20px_rgba(0,0,0,0.15)]"
-          />
-        }
-        imageOnRight={true}
-      >
+      <Block heading="Manual Refinement" image={<CorrectionAnimation />} imageOnRight={true}>
         Automatic transcripts can easily be manually corrected. Words that are likely not correct
         are highlighted for speedy corrections.
       </Block>
@@ -130,7 +120,7 @@ function Block({
       <div
         className={clsx(
           'text-center md:text-left items-center md:items-start flex flex-col flex-grow max-w-sm',
-          !imageOnRight && 'md:order-last'
+          !imageOnRight && 'md:order-last',
         )}
       >
         <h2 className="text-4xl font-semibold mb-6 leading-tight px-8 md:px-0">{heading}</h2>
