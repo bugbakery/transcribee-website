@@ -5,6 +5,7 @@ import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 
 import LogoSrc from '../assets/transcribee-logo.svg';
+import FundingBannerSrc from '../assets/pf_funding_logos.svg';
 import { ComponentProps } from 'react';
 
 const NavLink = ({
@@ -40,8 +41,11 @@ function MainNav() {
         <NavLink className="hidden md:block" href="/">
           Product
         </NavLink>
-        <NavLink className="hidden md:block" href="/pricing">
-          Pricing
+        <NavLink className="hidden md:block" href="/desktop">
+          Desktop
+        </NavLink>
+        <NavLink className="hidden md:block" href="/web">
+          Web
         </NavLink>
       </ul>
 
@@ -109,7 +113,7 @@ function Navbar() {
   );
 }
 
-function Footer({}) {
+function Footer({ }) {
   return (
     <footer className="bg-neutral-100  py-12 px-10 mt-20">
       <div className="flex flex-row gap-5 flex-wrap max-w-7xl mx-auto px-4">
@@ -126,14 +130,6 @@ function Footer({}) {
           </ul>
         </div>
         <div className="flex-grow">
-          <h3 className="font-semibold text-neutral-500">Pricing</h3>
-          <ul className="mt-1">
-            <NavLink href="/pricing">Standard</NavLink>
-            <NavLink href="/pricing">Educational</NavLink>
-            <NavLink href="/contact">Contact Us</NavLink>
-          </ul>
-        </div>
-        <div className="flex-grow">
           <h3 className="font-semibold text-neutral-500">Legal</h3>
           <ul className="mt-1">
             {/* <NavLink target="_blank" href="https://transcribee.net/page/tos">
@@ -146,6 +142,13 @@ function Footer({}) {
               Legal Notice
             </NavLink>
           </ul>
+        </div>
+        <div className="flex-grow flex">
+          <Image
+            src={FundingBannerSrc}
+            alt={'An image of the transcribee popup showing the automatic transcription status'}
+            className='flex-shrink max-h-[130px] -mt-2'
+          />
         </div>
       </div>
     </footer>

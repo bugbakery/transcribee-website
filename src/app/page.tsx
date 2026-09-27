@@ -3,7 +3,9 @@ import Image from 'next/image';
 import { Page } from '../components/Page';
 import { ReactNode } from 'react';
 
-import AppPreviewSrc from '../assets/app-preview.png';
+import DesktopPreviewSrc from '../assets/desktop-preview.png';
+import NewStarSrc from '../assets/new.svg';
+import WebDesktopSrc from '../assets/web_desktop.png';
 import WorkerPopupSrc from '../assets/worker_popup.png';
 import ExportSrc from '../assets/export.png';
 import clsx from 'clsx';
@@ -25,7 +27,7 @@ export default function HomePage() {
         }
       >
         transcribee uses the open source <i>Whisper</i> machine-learning (ML) model to create high
-        quality automated transcriptions.
+        quality automated transcription drafts as a starting point.
       </Block>
       <Block heading="Manual Refinement" image={<CorrectionAnimation />} imageOnRight={true}>
         Automatic transcripts can easily be manually corrected. Words that are likely not correct
@@ -36,13 +38,32 @@ export default function HomePage() {
         image={
           <Image
             src={ExportSrc}
-            alt={'A screenshot showing a modal with the export options'}
+            alt={'A screenshot of the export menu of transcribee showing different settings'}
             className="rounded-md w-[480px] px-10"
           />
         }
       >
         Completed documents can be exported as Text documents or for subtitle usage as WebVTT or
         SRT.
+      </Block>
+      <Block
+        heading="Desktop or Web: Choose your fighter"
+        image={
+          <a target="_blank" href="https://github.com/bugbakery/transcribee">
+            <Image
+              src={WebDesktopSrc}
+              width={1200}
+              height={600}
+              alt={'A screenshot of a browser with transcribee web next to a window of transcribee desktop'}
+              className="w-[530px]"
+            />
+          </a>
+        }
+        imageOnRight={true}
+      >
+        transcribee is available both as desktop software that you can install on your computer and use locally
+        and as a web application that can be hosted by organizations that supports collaborative editing and
+        using servers for transcription.
       </Block>
       <Block
         heading="100% Open Source"
@@ -54,15 +75,16 @@ export default function HomePage() {
               }
               width={1200}
               height={600}
-              alt={'An image showing the transcribee GitHub repository statistics'}
+              alt={'A banner advertising the github repository of transcribee'}
               className="rounded-md w-[530px] shadow-[0px_4px_20px_rgba(0,0,0,0.15)]"
             />
           </a>
         }
-        imageOnRight={true}
+        imageOnRight={false}
       >
         transcribee is open source and licensed under the AGPL-3.0 license. You can inspect the
-        code, contribute to it and host your own instance.{' '}
+        code, contribute to it. Of course you can always download transcribee desktop for free and
+        self host transcribee web for free.
       </Block>
     </Page>
   );
@@ -78,7 +100,7 @@ function Hero() {
           for everyone.
         </h1>
         <p className="text-lg leading-6 mb-6 max-w-sm">
-          We offer an open source tool for automatic transcriptions with word-level time alignment
+          transcribee is an open source tool for automatic transcriptions with word-level time alignment
           and collaborative editing.
         </p>
 
@@ -86,18 +108,33 @@ function Hero() {
           Perfect for interviews, podcasts, video subtitles or voice recordings.
         </p>
 
-        <Link
-          href="/signup"
-          className="inline-block bg-black hover:bg-gray-700 text-white px-4 py-2 rounded-md"
+        <div className='relative'>
+<Link
+          href="/desktop"
+          className="inline-block bg-black hover:bg-gray-700 text-white px-4 py-2 rounded-md mb-2"
         >
-          Get started for free →
+          Download transcribee desktop →
         </Link>
+        <Image
+          src={NewStarSrc}
+          alt="A star with the text 'new' in it"
+          className="absolute w-12 top-[-26px] left-[-32px]"
+        />
+
+        <Link
+          href="/web"
+          className="inline-block border hover:bg-gray-70 px-4 py-2 rounded-md"
+        >
+          Try transcribee web →
+        </Link>
+        </div>
+
       </div>
       <div className="flex items-center flex-grow w-full max-w-[800px]">
         <Image
-          src={AppPreviewSrc}
-          alt="Overview of the transcribee application"
-          className="rounded-md w-full aspect-[3/2] border border-1 border-gray-300 shadow-[0px_4px_20px_rgba(0,0,0,0.15)]"
+          src={DesktopPreviewSrc}
+          alt="Screenshot of the transcribee desktop application"
+          className="rounded-md w-full aspect-[3/2] scale-110"
         />
       </div>
     </div>
