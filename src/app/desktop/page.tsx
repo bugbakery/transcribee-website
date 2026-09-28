@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   },
 };
 
+const version = '0.1.0';
+function downloadUrl(kind: string) {
+  return `https://github.com/bugbakery/transcribee/releases/download/v${version}/transcribee-desktop_${version}_${kind}`;
+}
+
 export default function PricingPage() {
   return (
     <Page>
@@ -34,13 +39,13 @@ export default function PricingPage() {
           <h4 className="font-bold text-xl mt-4">Linux</h4>
           <div className='justify-center items-center flex flex-col h-full mt-8 gap-2'>
             <Link
-              href="/signup"
+              href={downloadUrl('amd64.AppImage')}
               className="inline-block bg-black hover:bg-gray-700 text-white px-4 py-2 rounded-md"
             >
               x86_64 AppImage
             </Link>
             <Link
-              href="/signup"
+              href={downloadUrl('aarch64.AppImage')}
               className="inline-block bg-black hover:bg-gray-700 text-white px-4 py-2 rounded-md"
             >
               aarch64 AppImage
@@ -59,7 +64,7 @@ export default function PricingPage() {
           <div className='justify-center items-center flex flex-col h-full mt-8 gap-2'>
 
             <Link
-              href="/signup"
+              href={downloadUrl('x64-setup.exe')}
               className="inline-block bg-black hover:bg-gray-700 text-white px-4 py-2 rounded-md"
             >
               x86_64 installer
@@ -79,13 +84,13 @@ export default function PricingPage() {
 
           <div className='justify-center items-center flex flex-col h-full mt-8 gap-2'>
             <Link
-              href="/signup"
+              href={downloadUrl('aarch64.dmg')}
               className="inline-block bg-black hover:bg-gray-700 text-white px-4 py-2 rounded-md"
             >
               Apple Silicon DMG
             </Link>
             <Link
-              href="/signup"
+              href={downloadUrl('x64.dmg')}
               className="inline-block bg-black hover:bg-gray-700 text-white px-4 py-2 rounded-md"
             >
               Intel DMG
