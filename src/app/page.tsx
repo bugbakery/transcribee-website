@@ -54,16 +54,18 @@ export default function HomePage() {
               src={WebDesktopSrc}
               width={1200}
               height={600}
-              alt={'A screenshot of a browser with transcribee web next to a window of transcribee desktop'}
+              alt={
+                'A screenshot of a browser with transcribee web next to a window of transcribee desktop'
+              }
               className="w-[530px]"
             />
           </a>
         }
         imageOnRight={true}
       >
-        transcribee is available both as desktop software that you can install on your computer and use locally
-        and as a web application that can be hosted by organizations that supports collaborative editing and
-        using servers for transcription.
+        transcribee is available both as desktop software that you can install on your computer and
+        use locally and as a web application that can be hosted by organizations that supports
+        collaborative editing and using servers for transcription.
       </Block>
       <Block
         heading="100% Open Source"
@@ -100,35 +102,32 @@ function Hero() {
           for everyone.
         </h1>
         <p className="text-lg leading-6 mb-6 max-w-sm">
-          transcribee is an open source tool for automatic transcriptions with word-level time alignment
-          and collaborative editing.
+          transcribee is an open source tool for automatic transcriptions with word-level time
+          alignment and collaborative editing.
         </p>
 
         <p className="text-lg leading-6 mb-6 max-w-sm">
           Perfect for interviews, podcasts, video subtitles or voice recordings.
         </p>
 
-        <div className='relative'>
-<Link
-          href="/desktop"
-          className="inline-block bg-black hover:bg-gray-700 text-white px-4 py-2 rounded-md mb-2"
-        >
-          Download transcribee desktop →
-        </Link>
-        <Image
-          src={NewStarSrc}
-          alt="A star with the text 'new' in it"
-          className="absolute w-12 top-[-26px] left-[-32px]"
-        />
-
-        <Link
-          href="/web"
-          className="inline-block border hover:bg-gray-70 px-4 py-2 rounded-md"
-        >
+        <div>
+        <div className='inline-block relative'>
+          <Link
+            href="/desktop"
+            className="inline-block bg-black hover:bg-gray-700 text-white px-4 py-2 rounded-md mb-2 mr-2"
+          >
+            Download transcribee desktop →
+          </Link>
+          <Image
+            src={NewStarSrc}
+            alt="A star with the text 'new' in it"
+            className="absolute w-12 top-[-26px] left-[-32px]"
+          />
+        </div>
+        <Link href="/web" className="inline-block border hover:bg-gray-70 px-4 py-2 rounded-md">
           Try transcribee web →
         </Link>
         </div>
-
       </div>
       <div className="flex items-center flex-grow w-full max-w-[800px]">
         <Image
