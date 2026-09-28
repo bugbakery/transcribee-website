@@ -3,11 +3,18 @@
 import Link from 'next/link';
 import { AiOutlineClose } from 'react-icons/ai';
 import { useLocalStorage } from '../hooks/useLocalStorage';
+import { useEffect, useState } from 'react';
 
 export function DesktopBanner() {
   const [hideDesktopBanner, setHideDesktopBanner] = useLocalStorage('hide-desktop-banner', '');
 
-  if (hideDesktopBanner != '') {
+  // Workaround to initially produce same html on client side as on server side. Needed for hydration to work.
+  const [hideDesktopBanner2, setHideDesktopBanner2] = useState('1');
+  useEffect(() => {
+    setHideDesktopBanner2(hideDesktopBanner);
+  }, [hideDesktopBanner]);
+
+  if (hideDesktopBanner2 != '') {
     return null;
   }
 
