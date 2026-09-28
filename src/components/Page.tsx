@@ -7,6 +7,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 import LogoSrc from '../assets/transcribee-logo.svg';
 import FundingBannerSrc from '../assets/pf_funding_logos.svg';
 import { ComponentProps } from 'react';
+import { DesktopBanner } from './DesktopBanner';
 
 const NavLink = ({
   children,
@@ -51,10 +52,7 @@ function MainNav() {
 
       <ul className="hidden md:flex gap-2.5 items-center order-last">
         <li>
-          <Link
-            href="/signup"
-            className="block px-4 py-2 rounded-md hover:bg-gray-200"
-          >
+          <Link href="/signup" className="block px-4 py-2 rounded-md hover:bg-gray-200">
             Sign Up
           </Link>
         </li>
@@ -113,7 +111,7 @@ function Navbar() {
   );
 }
 
-function Footer({ }) {
+function Footer({}) {
   return (
     <footer className="bg-neutral-100  py-12 px-10 mt-20">
       <div className="flex flex-row gap-5 flex-wrap max-w-7xl mx-auto px-4">
@@ -147,7 +145,7 @@ function Footer({ }) {
           <Image
             src={FundingBannerSrc}
             alt={'An image of the transcribee popup showing the automatic transcription status'}
-            className='flex-shrink max-h-[130px] -mt-2'
+            className="flex-shrink max-h-[130px] -mt-2"
           />
         </div>
       </div>
@@ -158,6 +156,7 @@ function Footer({ }) {
 export function Page({ children, className }: { children: React.ReactNode; className?: string }) {
   return (
     <div className="flex flex-col min-h-screen items-stretch place-content-stretch">
+      <DesktopBanner/>
       <Navbar />
       <main className={clsx('max-w-7xl mx-auto px-4', className)}>{children}</main>
       <div className="flex-grow" />
