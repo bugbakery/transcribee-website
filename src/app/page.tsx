@@ -133,7 +133,7 @@ function Hero() {
         <Image
           src={DesktopPreviewSrc}
           alt="Screenshot of the transcribee desktop application"
-          className="rounded-md w-full aspect-[3/2] scale-110"
+          className="rounded-md w-full aspect-[3/2] scale-[108%]"
         />
       </div>
     </div>
