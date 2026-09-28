@@ -27,11 +27,11 @@ export default function PricingPage() {
 
       <h3 className='text-center font-semibold mt-16 text-xl'>Download the alpha version of transcribee desktop:</h3>
 
-      <div className="flex my-16 flex-wrap gap-16 lg:gap-0 max-w-[500px] lg:max-w-none mx-auto lg:mx-none">
+      <div className="flex my-16 flex-wrap gap-8 lg:gap-0 max-w-[400px] lg:max-w-none mx-auto lg:mx-none">
         <div className={clsx(
           'border border-neutral-300 shadow-[0px_4px_20px_0px_rgba(0,0,0,0.15)] rounded-md border-solid',
           'flex-grow basis-0 h-[360px] flex flex-col py-14 px-1 mx-4 items-center',
-          'min-w-full lg:min-w-[340px]',
+          'min-w-full lg:min-w-0',
           'bg-white',
         )}
         >
@@ -55,7 +55,7 @@ export default function PricingPage() {
         <div className={clsx(
           'border border-neutral-300 shadow-[0px_4px_20px_0px_rgba(0,0,0,0.15)] rounded-md border-solid',
           'flex-grow basis-0 h-[360px] flex flex-col py-14 px-1 mx-4 items-center',
-          'min-w-full lg:min-w-[340px]',
+          'min-w-full lg:min-w-0',
           'bg-white',
         )}
         >
@@ -75,7 +75,7 @@ export default function PricingPage() {
         <div className={clsx(
           'border border-neutral-300 shadow-[0px_4px_20px_0px_rgba(0,0,0,0.15)] rounded-md border-solid',
           'flex-grow basis-0 h-[360px] flex flex-col py-14 px-1 mx-4 items-center',
-          'min-w-full lg:min-w-[340px]',
+          'min-w-full lg:min-w-0',
           'bg-white',
         )}
         >
@@ -111,7 +111,7 @@ export default function PricingPage() {
           <h3 className="text-2xl font-medium">transcribee web</h3>
           <p>
             You are working in a team or are part of an organization that would benefit from
-            a tool for collaborative transcription? Try
+            a tool for collaborative transcription?
             Try <Link href="/web" className="underline">
               transcribee web
             </Link> for a browser-based transcription tool.
