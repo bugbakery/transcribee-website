@@ -95,7 +95,8 @@ function SidebarMenu() {
 
         <ul className="flex flex-col gap-2">
           <NavLink href="/">Product</NavLink>
-          <NavLink href="/pricing">Pricing</NavLink>
+          <NavLink href="/desktop">Desktop</NavLink>
+          <NavLink href="/web">Web</NavLink>
         </ul>
       </div>
     </div>
