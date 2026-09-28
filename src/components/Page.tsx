@@ -85,7 +85,7 @@ function SidebarMenu() {
         id="menu-checkbox"
         className="peer opacity-0 w-0 h-0 md:hidden"
       />
-      <div className="fixed flex flex-col right-0 top-0 bottom-0 bg-white p-4 shadow-lg border border-1 border-gray-200 transition-all duration-300 translate-x-[calc(100%+20px)] invisible peer-checked:visible peer-checked:translate-x-0 w-full sm:w-80">
+      <div className="fixed flex flex-col right-0 top-0 bottom-0 bg-white p-4 shadow-lg border border-1 border-gray-200 transition-all duration-300 translate-x-[calc(100%+20px)] invisible peer-checked:visible peer-checked:translate-x-0 w-full sm:w-80 z-30">
         <label
           htmlFor="menu-checkbox"
           className="block mt-1 w-5 h-5 self-end opacity-60 hover:opacity-100 cursor-pointer"
