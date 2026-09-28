@@ -5,7 +5,9 @@ import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 
 import LogoSrc from '../assets/transcribee-logo.svg';
+import FundingBannerSrc from '../assets/pf_funding_logos.svg';
 import { ComponentProps } from 'react';
+import { DesktopBanner } from './DesktopBanner';
 
 const NavLink = ({
   children,
@@ -40,17 +42,17 @@ function MainNav() {
         <NavLink className="hidden md:block" href="/">
           Product
         </NavLink>
-        <NavLink className="hidden md:block" href="/pricing">
-          Pricing
+        <NavLink className="hidden md:block" href="/desktop">
+          Desktop
+        </NavLink>
+        <NavLink className="hidden md:block" href="/web">
+          Web
         </NavLink>
       </ul>
 
       <ul className="hidden md:flex gap-2.5 items-center order-last">
         <li>
-          <Link
-            href="/signup"
-            className="block px-4 py-2 rounded-md hover:bg-gray-200"
-          >
+          <Link href="/signup" className="block px-4 py-2 rounded-md hover:bg-gray-200">
             Sign Up
           </Link>
         </li>
@@ -93,7 +95,8 @@ function SidebarMenu() {
 
         <ul className="flex flex-col gap-2">
           <NavLink href="/">Product</NavLink>
-          <NavLink href="/pricing">Pricing</NavLink>
+          <NavLink href="/desktop">Desktop</NavLink>
+          <NavLink href="/web">Web</NavLink>
         </ul>
       </div>
     </div>
@@ -126,14 +129,6 @@ function Footer({}) {
           </ul>
         </div>
         <div className="flex-grow">
-          <h3 className="font-semibold text-neutral-500">Pricing</h3>
-          <ul className="mt-1">
-            <NavLink href="/pricing">Standard</NavLink>
-            <NavLink href="/pricing">Educational</NavLink>
-            <NavLink href="/contact">Contact Us</NavLink>
-          </ul>
-        </div>
-        <div className="flex-grow">
           <h3 className="font-semibold text-neutral-500">Legal</h3>
           <ul className="mt-1">
             {/* <NavLink target="_blank" href="https://transcribee.net/page/tos">
@@ -147,6 +142,13 @@ function Footer({}) {
             </NavLink>
           </ul>
         </div>
+        <div className="flex-grow flex">
+          <Image
+            src={FundingBannerSrc}
+            alt={'An image of the transcribee popup showing the automatic transcription status'}
+            className="flex-shrink max-h-[130px] -mt-2"
+          />
+        </div>
       </div>
     </footer>
   );
@@ -155,6 +157,7 @@ function Footer({}) {
 export function Page({ children, className }: { children: React.ReactNode; className?: string }) {
   return (
     <div className="flex flex-col min-h-screen items-stretch place-content-stretch">
+      <DesktopBanner/>
       <Navbar />
       <main className={clsx('max-w-7xl mx-auto px-4', className)}>{children}</main>
       <div className="flex-grow" />
