@@ -18,8 +18,8 @@ export default function ContactPage() {
 
       <p className='pb-4 pt-10'>
         If you have any questions regarding transcribee, do not hesitate to contact us.
-        Be it for Cooperations, custom Integrations, development of custom features, requests for
-        discount or anything else you can come up with.
+        Be it for cooperations, custom integrations, development of custom features, crazy ideas
+        or anything else you can come up with.
       </p>
 
       <p className='pb-4'>
