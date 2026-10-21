@@ -18,7 +18,7 @@ export default function ContactPage() {
 
       <p className="mb-4">Responsible for the content:</p>
       <p className="mb-4">
-        Engelhardt, Habiger, Heinemann & Mandler GbR
+        bugbakery GbR (Engelhardt, Habiger, Heinemann & Mandler)
         <br />
         c/o Engelhardt
         <br />
