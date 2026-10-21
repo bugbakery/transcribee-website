@@ -123,6 +123,8 @@ function Footer({}) {
           <h3 className="font-semibold text-neutral-500">Product</h3>
           <ul className="mt-1">
             <NavLink href="/">Features</NavLink>
+            <NavLink href="/desktop">Desktop</NavLink>
+            <NavLink href="/web">Web</NavLink>
             <NavLink target="_blank" href="https://github.com/bugbakery/transcribee">
               GitHub
             </NavLink>
@@ -139,6 +141,9 @@ function Footer({}) {
             </NavLink>
             <NavLink href="/legal-notice">
               Legal Notice
+            </NavLink>
+            <NavLink href="/contact">
+              Contact Us
             </NavLink>
           </ul>
         </div>

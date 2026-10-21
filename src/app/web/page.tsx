@@ -29,7 +29,7 @@ export default function PricingPage() {
       </p>
 
       <p className="mx-auto max-w-3xl">
-        If you need custom features, have comments, questions or need support, please get in touch.
+        If you need custom features, have comments, questions or need support, please <Link href="/contact" className="underline">get in touch</Link>.
       </p>
 
       <div className="flex my-16 gap-4 flex-wrap max-w-[500px] lg:max-w-none mx-auto lg:mx-none">
@@ -39,7 +39,7 @@ export default function PricingPage() {
             transcribee is 100% open source software. You can setup your own instance. No license
             costs apply. If you need consulting or support, please{' '}
             <Link href="/contact" className="underline">
-              Contact Us
+              contact us
             </Link>
             .
           </p>

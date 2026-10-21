@@ -104,7 +104,7 @@ export default function PricingPage() {
           <h3 className="text-2xl font-medium">Slow Computer?</h3>
           <p>
             The automatic transcription feature of transcribee desktop is fairly slow on older computers.
-            For people with slower computers, transcribee web might be a better choice.
+            For people with slower computers, <Link href="/web" className="underline">transcribee web</Link> might be a better choice.
           </p>
         </div>
         <div className="rounded-md bg-neutral-100 p-10 basis-0 flex-grow min-w-[300px]">
