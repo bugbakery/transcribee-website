@@ -19,7 +19,7 @@ function downloadUrl(kind: string) {
 
 export default function PricingPage() {
   return (
-    <Page>
+    <Page className='w-full'>
       <h2 className="text-center text-5xl font-semibold my-4">transcribee desktop</h2>
       <div className="text-center my-4">
         Keep your data local. Transcribe for free.
@@ -31,7 +31,6 @@ export default function PricingPage() {
         <div className={clsx(
           'border border-neutral-300 shadow-[0px_4px_20px_0px_rgba(0,0,0,0.15)] rounded-md border-solid',
           'flex-grow basis-0 h-[360px] flex flex-col py-14 px-1 mx-4 items-center',
-          'min-w-full lg:min-w-0',
           'bg-white',
         )}
         >
@@ -55,7 +54,6 @@ export default function PricingPage() {
         <div className={clsx(
           'border border-neutral-300 shadow-[0px_4px_20px_0px_rgba(0,0,0,0.15)] rounded-md border-solid',
           'flex-grow basis-0 h-[360px] flex flex-col py-14 px-1 mx-4 items-center',
-          'min-w-full lg:min-w-0',
           'bg-white',
         )}
         >
@@ -75,7 +73,6 @@ export default function PricingPage() {
         <div className={clsx(
           'border border-neutral-300 shadow-[0px_4px_20px_0px_rgba(0,0,0,0.15)] rounded-md border-solid',
           'flex-grow basis-0 h-[360px] flex flex-col py-14 px-1 mx-4 items-center',
-          'min-w-full lg:min-w-0',
           'bg-white',
         )}
         >
@@ -99,15 +96,15 @@ export default function PricingPage() {
         </div>
       </div>
 
-      <div className="flex my-16 gap-4 flex-wrap max-w-[500px] lg:max-w-none mx-auto lg:mx-none">
-        <div className="rounded-md bg-neutral-100 p-10 basis-0 flex-grow min-w-[400px]">
+      <div className="flex my-16 gap-4 flex-wrap justify-center">
+        <div className="rounded-md bg-neutral-100 p-10 basis-0 flex-grow min-w-[300px] max-w-[500px] max-[320px]:min-w-full">
           <h3 className="text-2xl font-medium">Slow Computer?</h3>
           <p>
             The automatic transcription feature of transcribee desktop is fairly slow on older computers.
             For people with slower computers, <Link href="/web" className="underline">transcribee web</Link> might be a better choice.
           </p>
         </div>
-        <div className="rounded-md bg-neutral-100 p-10 basis-0 flex-grow min-w-[300px]">
+        <div className="rounded-md bg-neutral-100 p-10 basis-0 flex-grow min-w-[300px] max-w-[500px] max-[320px]:min-w-full">
           <h3 className="text-2xl font-medium">transcribee web</h3>
           <p>
             You are working in a team or are part of an organization that would benefit from

@@ -32,8 +32,8 @@ export default function PricingPage() {
         If you need custom features, have comments, questions or need support, please <Link href="/contact" className="underline">get in touch</Link>.
       </p>
 
-      <div className="flex my-16 gap-4 flex-wrap max-w-[500px] lg:max-w-none mx-auto lg:mx-none">
-        <div className="rounded-md bg-neutral-100 p-10 basis-0 flex-grow min-w-[400px]">
+      <div className="flex my-16 gap-4 flex-wrap justify-center">
+        <div className="rounded-md bg-neutral-100 p-10 basis-0 flex-grow min-w-[300px] max-w-[500px] max-[320px]:min-w-full">
           <h3 className="text-2xl font-medium">Host it yourself</h3>
           <p>
             transcribee is 100% open source software. You can setup your own instance. No license
@@ -44,7 +44,7 @@ export default function PricingPage() {
             .
           </p>
         </div>
-        <div className="rounded-md bg-neutral-100 p-10 basis-0 flex-grow min-w-[300px]">
+        <div className="rounded-md bg-neutral-100 p-10 basis-0 flex-grow min-w-[300px] max-w-[500px] max-[320px]:min-w-full">
           <h3 className="text-2xl font-medium">transcribee desktop</h3>
           <p>
             You are working alone or it is important that your data does not leave your computer?
